@@ -1,0 +1,73 @@
+.ultimasNoticias {
+    height: 1314px;
+    justify-items: center;
+}
+
+h2 {
+    color: #1da0ed;
+}
+
+.noticiasGroup {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 600px;
+    background-color: #102e41;
+    margin-right: 80px;
+    justify-items: center;
+}
+
+.noticia {
+    display: grid;
+    grid-template-columns: 0.4fr 0.6fr;
+    align-items: center;
+    height: 190px;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+    background-color: #64899e;
+    padding: 5px;
+}
+
+.noticia div {
+    justify-items: center;
+}
+
+.noticia div p {
+    color: #1da0ed;
+}
+
+.noticia div img {
+    border-radius: 10px;
+    height: 150px;
+    align-self: center;
+}
+
+.infoGamePromo {
+    align-self: self-start;
+    height: 190px;
+    position: relative;
+}
+
+aside {
+    height: auto;
+    grid-template-rows: 300px 300px 300px 300px;
+}
+
+.price{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.valorComPromo {
+    color: green;
+}
+
+.valorSemPromo {
+    color: rgb(138, 10, 10);
+    text-decoration: line-through;
+}
