@@ -1,0 +1,25 @@
+aside {
+    margin-top: 30px;
+    margin-right: 20px;
+    display: grid;
+    grid-template-rows: 300px 300px 300px 300px 300px;
+    gap: 20px;
+    background-color: #102e41;
+    padding: 10px;
+}
+
+.asideNoticia {
+    display: grid;
+    grid-template-rows: 1fr 0.5fr;
+    justify-content: center;
+    background-color: gray;
+    gap: 5px;
+    padding: 5px;
+    border: 3px solid #1da0ed;
+    border-radius: 10px;
+}
+
+#asideFoto {
+    height: 180px;
+    border-radius: 10px;
+}

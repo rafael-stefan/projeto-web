@@ -1,0 +1,48 @@
+.layout {
+    display: grid;
+    grid-template-columns: 0.8fr 0.2fr;
+    gap: 20px;
+}
+
+#noticiaHeader {
+    width: auto;
+    height: auto;
+    justify-items: left;
+    align-items: center;
+    background-color: #102e41;
+    justify-self: center;
+    padding-left: 20px;
+}
+
+#noticiaHeader h2 {
+    background-color: #64899e;
+    height: auto;
+    width: auto;
+    padding: 20px;
+    margin: 40px 0px 20px 0px;
+    border: 3px solid #1da0ed;
+    border-radius: 10px;
+}
+
+form {
+    padding-left: 20px;
+    padding-bottom: 40px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height:360px;
+    width: auto;
+    padding: 50px;
+    margin-top: 85px;
+}
+
+form {
+    background-color: #102e41;
+}
+
+aside {
+    margin-top: 60px;
+    background-color: rgb(26, 24, 24);
+}
