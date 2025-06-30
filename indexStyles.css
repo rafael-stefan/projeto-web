@@ -13,7 +13,7 @@ body {
     font-family: sans-serif;
 }
 
-header {
+#mainHeader {
     position: relative;
     left: 0;
     top: 0;
