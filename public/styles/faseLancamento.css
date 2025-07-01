@@ -5,7 +5,6 @@
 
 h2 {
     color: white;
-    font
 }
 
 .layout-titulo {
@@ -14,7 +13,7 @@ h2 {
     color: white;
     padding: 40px;
     border-radius: 20px;
-    border: 5px solid #1da0ed;
+    border: 3px solid #1da0ed;
 }
 
 .noticiasGroup {
@@ -34,10 +33,10 @@ h2 {
     width: 1100px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px black;
-    background-color: #d9d9d9;
+    background-color: #3b5360;
     padding: 5px;
     margin-left: 60px;
-    border: 5px solid #1da0ed;
+    border: 3px solid #1da0ed;
 }
 
 .noticia div {
