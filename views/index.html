@@ -1,281 +1,331 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
+    <title>Secret Phase - Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../public/styles/indexStyles.css">
 </head>
 <body>
-    <header id="mainHeader">
-        <div class="logo-container" onclick="window.location.href='index.html'">
-            <img src="../img/logo_secretphase.png" alt="logo">
-        </div>
-        <div id="infoDiv">
-            <div id="searchDiv">
-                <input type="text" id="searchBar">
-                <button class="btn">
-                    <img src="../img/search.icon.png" alt="search">
-                </button>
-                <button class="btn">
-                    <img src="../img/hamburguer.icon.png" alt="hamburguer">
-                </button>
-            </div>
-            <div id="navigationDiv">
-                <div style="border-radius: 30px 0px 0px 0px;" onclick="window.location.href='faseLancamento.html'"> 
-                    <p>Fase de Lançamento</p>
-                </div>
-                <div onclick="window.location.href='promocoes.html'">
-                    <p>Promoções</p>
-                </div>
-                <div onclick="window.location.href='forum.html'">
-                    <p>Forum</p>
-                </div>
-                <div onclick="window.location.href='contato.html'">
-                    <p>Contato</p>
-                </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="../img/logo_secretphase.png" alt="logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <form class="d-flex mx-auto my-2 my-lg-0" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Pesquisar">
+                    <button class="btn btn-outline-info" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faseLancamento.html">Lancamentos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="promocoes.html">Promocoes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="forum.html">Forum</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                </ul>
             </div>
         </div>
-    </header>
-    <section id="ultimasNoticiasImg">
-        <!-- apenas imagens das noticias aqui bem grande -->
-            <img src="../img/outlast1.jpg" alt="" class="noticiaPhoto" onclick="window.location.href='noticia1.html'" style="cursor: pointer;">
-            <div>
-            <img src="../img/hades2.jpg" alt="" class="noticiaPhoto" onclick="window.location.href='noticia2.html'" style="cursor: pointer;">
-            
-            <img src="../img/R6x-Siege-540x960.avif" alt="" class="noticiaPhoto" onclick="window.location.href='noticia3.html'" style="cursor: pointer;">
-            
-            <img src="../img/stellarblade.jpeg" alt="" class="noticiaPhoto" onclick="window.location.href='noticia4.html'" style="cursor: pointer;">
-            
-            <img src="../img/tlou2.jpg" alt="" class="noticiaPhoto" onclick="window.location.href='noticia5.html'" style="cursor: pointer;">
+    </nav>
+
+    <!-- Carousel -->
+    <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" onclick="window.location.href='noticia1.html'" style="cursor:pointer;">
+                <img src="../img/outlast1.jpg" class="d-block w-100" alt="Outlast">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Outlast: O jogo que transformou medo em arte</h5>
+                </div>
             </div>
-    </section>
-    <div class="layout">
-        <main>
-            <section class="ultimasNoticias">
-                
-                <div class="noticiasGroup">
-                    <article class="noticia" onclick="window.location.href='./noticia1.html'" style="cursor: pointer;">
-                        <img src="../img/outlast1.jpg" alt="" class="noticiaPhoto">
-                        <div class="noticiaInfo">
-                            <div>
-                                <h2>Outlast: O jogo que transformou medo em arte.</h2>
-                                <p>Um jogo que transforma medo em arte: descubra por que Outlast é um dos títulos mais perturbadores da última década.</p>
-                            </div>
-                            <div class="comentarioInfo">
-                                <div>
-                                <img src="../img/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10</p>
-                            </div>
-                            <div>
-                                <img src="../img/add_comment_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>2</p>
-                            </div>
-                            <div>
-                                <img src="../img/calendar_month_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10/10/25</p>
-                            </div>
-                        </div>
-                    </article>
-                     <hr>
-                    <article class="noticia" onclick="window.location.href='./noticia2.html'"  style="cursor: pointer;" >
-                        <img src="../img/hades2.jpg" alt="" class="noticiaPhoto">
-                        <div class="noticiaInfo">
-                            <div>
-                                <h2>Hades II: o retorno triunfante ao inferno</h2>
-                                <p>A sequência do aclamado roguelike da Supergiant mergulha ainda mais fundo na mitologia e na ação.</p>
-                            </div>
-                            <div class="comentarioInfo">
-                                <div>
-                                <img src="../img/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10</p>
-                            </div>
-                            <div>
-                                <img src="../img/add_comment_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>2</p>
-                            </div>
-                            <div>
-                                <img src="../img/calendar_month_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10/10/25</p>
-                            </div>
-                        </div>
-                    </article>
-                    <hr>
-                    <article class="noticia" onclick="window.location.href='./noticia3.html'"  style="cursor: pointer;">
-                        <img src="../img/R6x-Siege-540x960.avif" alt="" class="noticiaPhoto">
-                        <div class="noticiaInfo">
-                            <div>
-                                <h2>Rainbow Six Siege X: A Nova Era do Competitivo</h2>
-                                <p>Siege X marca uma virada estratégica para a franquia, com novos operadores, engine atualizada e foco total no competitivo.</p>
-                            </div>
-                            <div class="comentarioInfo">
-                                <div>
-                                <img src="../img/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10</p>
-                            </div>
-                            <div>
-                                <img src="../img/add_comment_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>2</p>
-                            </div>
-                            <div>
-                                <img src="../img/calendar_month_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10/10/25</p>
-                            </div>
-                        </div>
-                    </article>
-                    <hr>
-                    <article class="noticia" onclick="window.location.href='./noticia4.html'"  style="cursor: pointer;">
-                        <img src="../img/stellarblade.jpeg" alt="" class="noticiaPhoto">
-                        <div class="noticiaInfo">
-                            <div>
-                                <h2>Stellar Blade: estilo, combate e polêmica em um só pacote</h2>
-                                <p>Stellar Blade mistura ação frenética e visual estiloso com temas sci-fi e grande atenção da mídia.</p>
-                            </div>
-                            <div class="comentarioInfo">
-                                <div>
-                                <img src="../img/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10</p>
-                            </div>
-                            <div>
-                                <img src="../img/add_comment_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>2</p>
-                            </div>
-                            <div>
-                                <img src="../img/calendar_month_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10/10/25</p>
-                            </div>
-                        </div>
-                    </article>
-                    <hr>
-                    <article class="noticia" onclick="window.location.href='./noticia5.html'"  style="cursor: pointer;">
-                        <img src="../img/tlou2.jpg" alt="" class="noticiaPhoto">
-                        <div class="noticiaInfo">
-                            <div>
-                                <h2>The Last of Us - Temporada 2 promete dividir corações</h2>
-                                <p>A segunda temporada da série da HBO promete fidelidade brutal ao jogo e dilemas emocionais intensos.</p>
-                            </div>
-                            <div class="comentarioInfo">
-                                <div>
-                                <img src="../img/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10</p>
-                            </div>
-                            <div>
-                                <img src="../img/add_comment_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>2</p>
-                            </div>
-                            <div>
-                                <img src="../img/calendar_month_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10/10/25</p>
-                            </div>
-                        </div>
-                    </article>
-                    <hr>
-                    <article class="noticia" onclick="window.location.href='./noticia6.html'"  style="cursor: pointer;">
-                        <img src="../img/fallout-capa.webp" alt="" class="noticiaPhoto">
-                        <div class="noticiaInfo">
-                            <div>
-                                <h2>Fallout: a adaptação que surpreendeu até os céticos</h2>
-                                <p>Fallout, da Prime Video, quebra o ciclo de adaptações ruins de jogos e conquista crítica e público.</p>
-                            </div>
-                            <div class="comentarioInfo">
-                                <div>
-                                <img src="../img/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10</p>
-                            </div>
-                            <div>
-                                <img src="../img/add_comment_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>2</p>
-                            </div>
-                            <div>
-                                <img src="../img/calendar_month_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10/10/25</p>
-                            </div>
-                        </div>
-                    </article>
-                    <hr>
-                    <article class="noticia" onclick="window.location.href='./noticia7.html'"  style="cursor: pointer;">
-                        <img src="../img/acshadow.jpeg" alt="" class="noticiaPhoto">
-                        <div class="noticiaInfo">
-                            <div>
-                                <h2>Assassin’s Creed Shadows: Japão Feudal e Dupla Protagonista Marcam Nova Fase da Franquia</h2>
-                                <p>A Ubisoft aposta alto em Assassin's Creed Shadows, ambientado no Japão feudal e com dois protagonistas jogáveis.</p>
-                            </div>
-                            <div class="comentarioInfo">
-                                <div>
-                                <img src="../img/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10</p>
-                            </div>
-                            <div>
-                                <img src="../img/add_comment_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>2</p>
-                            </div>
-                            <div>
-                                <img src="../img/calendar_month_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10/10/25</p>
-                            </div>
-                        </div>
-                    </article>
-                </div> 
-            </section>
-        </main>
-    
-        <aside>
-            <div class="asideNoticia" onclick="window.location.href='noticia7.html'" style="cursor: pointer;">
-                <img src="../img/acshadow.jpeg" alt="" id="asideFoto">
-                <h3>Assassin’s Creed Shadows: Japão Feudal e Dupla Protagonista Marcam Nova Fase da Franquia</h3>
+            <div class="carousel-item" onclick="window.location.href='noticia2.html'" style="cursor:pointer;">
+                <img src="../img/hades2.jpg" class="d-block w-100" alt="Hades II">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Hades II: o retorno triunfante ao inferno</h5>
+                </div>
             </div>
-            <div class="asideNoticia" onclick="window.location.href='noticia6.html'" style="cursor: pointer;">
-                <img src="../img/fallout-capa.webp" alt="" id="asideFoto">
-                <h3>Fallout: a adaptação que surpreendeu até os céticos</h3>
+            <div class="carousel-item" onclick="window.location.href='noticia3.html'" style="cursor:pointer;">
+                <img src="../img/R6x-Siege-540x960.avif" class="d-block w-100" alt="Rainbow Six Siege X">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Rainbow Six Siege X: A Nova Era do Competitivo</h5>
+                </div>
             </div>
-            <div class="asideNoticia" onclick="window.location.href='noticia1.html'" style="cursor: pointer;">
-                <img src="../img/outlast1.jpg" alt="" id="asideFoto">
-                <h3>OutLast: O jogo que transformou medo em arte</h3>
+            <div class="carousel-item" onclick="window.location.href='noticia4.html'" style="cursor:pointer;">
+                <img src="../img/stellarblade.jpeg" class="d-block w-100" alt="Stellar Blade">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Stellar Blade: estilo, combate e polemica</h5>
+                </div>
             </div>
-            <div class="asideNoticia" onclick="window.location.href='noticia2.html'" style="cursor: pointer;">
-                <img src="../img/hades2.jpg" alt="" id="asideFoto">
-                <h3>Hades II: o retorno triunfante ao inferno</h3>
+            <div class="carousel-item" onclick="window.location.href='noticia5.html'" style="cursor:pointer;">
+                <img src="../img/tlou2.jpg" class="d-block w-100" alt="The Last of Us">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>The Last of Us - Temporada 2</h5>
+                </div>
             </div>
-            <div class="asideNoticia" onclick="window.location.href='noticia3.html'" style="cursor: pointer;">
-                <img src="../img/R6x-Siege-540x960.avif" alt="" id="asideFoto">
-                <h3>Rainbow Six Siege X: A Nova Era do Competitivo</h3>
-            </div>
-        </aside> 
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Proximo</span>
+        </button>
     </div>
 
+    <!-- Alert de boas-vindas -->
+    <div class="container-fluid mt-3">
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            <i class="bi bi-controller"></i> <strong>Bem-vindo ao Secret Phase!</strong> Seu portal de noticias sobre games. Confira as ultimas novidades!
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
+        </div>
+    </div>
 
-    <footer>
-        <div id="footerpoliticas">
-            <nav>
-                <ul>
-                    <li><a href="">Politica de privacidade</a></li>
-                    <li><a href="">Politica de cookies</a></li>
-                    <li><a href="">termos de uso</a></li>
-                    <li><a href="">Suporte</a></li>
-                    <li><a href="">Imprensa</a></li>
-                </ul>
-            </nav>
+    <!-- Conteudo Principal -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Noticias -->
+            <div class="col-lg-9">
+                <div class="row g-3">
+                    <!-- Noticia 1 -->
+                    <div class="col-12">
+                        <div class="card card-custom" onclick="window.location.href='noticia1.html'" style="cursor:pointer;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../img/outlast1.jpg" class="img-fluid rounded-start h-100 w-100" alt="Outlast" style="object-fit:cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Outlast: O jogo que transformou medo em arte.</h5>
+                                        <p class="card-text">Um jogo que transforma medo em arte: descubra por que Outlast e um dos titulos mais perturbadores da ultima decada.</p>
+                                        <div class="d-flex gap-3 text-muted small">
+                                            <span><i class="bi bi-heart-fill text-danger"></i> 10</span>
+                                            <span><i class="bi bi-chat-fill text-info"></i> 2</span>
+                                            <span><i class="bi bi-calendar-fill"></i> 10/10/25</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Noticia 2 -->
+                    <div class="col-12">
+                        <div class="card card-custom" onclick="window.location.href='noticia2.html'" style="cursor:pointer;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../img/hades2.jpg" class="img-fluid rounded-start h-100 w-100" alt="Hades II" style="object-fit:cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Hades II: o retorno triunfante ao inferno</h5>
+                                        <p class="card-text">A sequencia do aclamado roguelike da Supergiant mergulha ainda mais fundo na mitologia e na acao.</p>
+                                        <div class="d-flex gap-3 text-muted small">
+                                            <span><i class="bi bi-heart-fill text-danger"></i> 10</span>
+                                            <span><i class="bi bi-chat-fill text-info"></i> 2</span>
+                                            <span><i class="bi bi-calendar-fill"></i> 10/10/25</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Noticia 3 -->
+                    <div class="col-12">
+                        <div class="card card-custom" onclick="window.location.href='noticia3.html'" style="cursor:pointer;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../img/R6x-Siege-540x960.avif" class="img-fluid rounded-start h-100 w-100" alt="R6 Siege X" style="object-fit:cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Rainbow Six Siege X: A Nova Era do Competitivo</h5>
+                                        <p class="card-text">Siege X marca uma virada estrategica para a franquia, com novos operadores, engine atualizada e foco total no competitivo.</p>
+                                        <div class="d-flex gap-3 text-muted small">
+                                            <span><i class="bi bi-heart-fill text-danger"></i> 10</span>
+                                            <span><i class="bi bi-chat-fill text-info"></i> 2</span>
+                                            <span><i class="bi bi-calendar-fill"></i> 10/10/25</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Noticia 4 -->
+                    <div class="col-12">
+                        <div class="card card-custom" onclick="window.location.href='noticia4.html'" style="cursor:pointer;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../img/stellarblade.jpeg" class="img-fluid rounded-start h-100 w-100" alt="Stellar Blade" style="object-fit:cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Stellar Blade: estilo, combate e polemica em um so pacote</h5>
+                                        <p class="card-text">Stellar Blade mistura acao frenetica e visual estiloso com temas sci-fi e grande atencao da midia.</p>
+                                        <div class="d-flex gap-3 text-muted small">
+                                            <span><i class="bi bi-heart-fill text-danger"></i> 10</span>
+                                            <span><i class="bi bi-chat-fill text-info"></i> 2</span>
+                                            <span><i class="bi bi-calendar-fill"></i> 10/10/25</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Noticia 5 -->
+                    <div class="col-12">
+                        <div class="card card-custom" onclick="window.location.href='noticia5.html'" style="cursor:pointer;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../img/tlou2.jpg" class="img-fluid rounded-start h-100 w-100" alt="The Last of Us" style="object-fit:cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">The Last of Us - Temporada 2 promete dividir coracoes</h5>
+                                        <p class="card-text">A segunda temporada da serie da HBO promete fidelidade brutal ao jogo e dilemas emocionais intensos.</p>
+                                        <div class="d-flex gap-3 text-muted small">
+                                            <span><i class="bi bi-heart-fill text-danger"></i> 10</span>
+                                            <span><i class="bi bi-chat-fill text-info"></i> 2</span>
+                                            <span><i class="bi bi-calendar-fill"></i> 10/10/25</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Noticia 6 -->
+                    <div class="col-12">
+                        <div class="card card-custom" onclick="window.location.href='noticia6.html'" style="cursor:pointer;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../img/fallout-capa.webp" class="img-fluid rounded-start h-100 w-100" alt="Fallout" style="object-fit:cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Fallout: a adaptacao que surpreendeu ate os ceticos</h5>
+                                        <p class="card-text">Fallout, da Prime Video, quebra o ciclo de adaptacoes ruins de jogos e conquista critica e publico.</p>
+                                        <div class="d-flex gap-3 text-muted small">
+                                            <span><i class="bi bi-heart-fill text-danger"></i> 10</span>
+                                            <span><i class="bi bi-chat-fill text-info"></i> 2</span>
+                                            <span><i class="bi bi-calendar-fill"></i> 10/10/25</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Noticia 7 -->
+                    <div class="col-12">
+                        <div class="card card-custom" onclick="window.location.href='noticia7.html'" style="cursor:pointer;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="../img/acshadow.jpeg" class="img-fluid rounded-start h-100 w-100" alt="AC Shadows" style="object-fit:cover;">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Assassin's Creed Shadows: Japao Feudal e Dupla Protagonista</h5>
+                                        <p class="card-text">A Ubisoft aposta alto em Assassin's Creed Shadows, ambientado no Japao feudal e com dois protagonistas jogaveis.</p>
+                                        <div class="d-flex gap-3 text-muted small">
+                                            <span><i class="bi bi-heart-fill text-danger"></i> 10</span>
+                                            <span><i class="bi bi-chat-fill text-info"></i> 2</span>
+                                            <span><i class="bi bi-calendar-fill"></i> 10/10/25</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aside / Sidebar -->
+            <div class="col-lg-3 mt-3">
+                <h5 class="mb-3"><i class="bi bi-fire"></i> Destaques</h5>
+                <div class="card aside-card mb-3" onclick="window.location.href='noticia7.html'" style="cursor:pointer;">
+                    <img src="../img/acshadow.jpeg" class="card-img-top" alt="AC Shadows">
+                    <div class="card-body p-2">
+                        <h6 class="card-title small">Assassin's Creed Shadows: Japao Feudal e Dupla Protagonista</h6>
+                    </div>
+                </div>
+                <div class="card aside-card mb-3" onclick="window.location.href='noticia6.html'" style="cursor:pointer;">
+                    <img src="../img/fallout-capa.webp" class="card-img-top" alt="Fallout">
+                    <div class="card-body p-2">
+                        <h6 class="card-title small">Fallout: a adaptacao que surpreendeu ate os ceticos</h6>
+                    </div>
+                </div>
+                <div class="card aside-card mb-3" onclick="window.location.href='noticia1.html'" style="cursor:pointer;">
+                    <img src="../img/outlast1.jpg" class="card-img-top" alt="Outlast">
+                    <div class="card-body p-2">
+                        <h6 class="card-title small">OutLast: O jogo que transformou medo em arte</h6>
+                    </div>
+                </div>
+                <div class="card aside-card mb-3" onclick="window.location.href='noticia2.html'" style="cursor:pointer;">
+                    <img src="../img/hades2.jpg" class="card-img-top" alt="Hades II">
+                    <div class="card-body p-2">
+                        <h6 class="card-title small">Hades II: o retorno triunfante ao inferno</h6>
+                    </div>
+                </div>
+                <div class="card aside-card mb-3" onclick="window.location.href='noticia3.html'" style="cursor:pointer;">
+                    <img src="../img/R6x-Siege-540x960.avif" class="card-img-top" alt="R6 Siege X">
+                    <div class="card-body p-2">
+                        <h6 class="card-title small">Rainbow Six Siege X: A Nova Era do Competitivo</h6>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="footerVejaMais">
-            <nav>
-                <ul>
-                    <li><a href="">Colunistas</a></li>
-                    <li><a href="">FeedClub</a></li>
-                    <li><a href="">Musicas</a></li>
-                    <li><a href="">Curiosidades</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div id="footerSiga">
-            <nav>
-                <ul>
-                    <li><a href="">YouTube</a></li>
-                    <li><a href="">Instagram</a></li>
-                    <li><a href="">Twitter</a></li>
-                    <li><a href="">Facebook</a></li>
-                </ul>
-            </nav>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-custom text-white pt-4 pb-3 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h6>Politicas</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Politica de privacidade</a></li>
+                        <li><a href="#">Politica de cookies</a></li>
+                        <li><a href="#">Termos de uso</a></li>
+                        <li><a href="#">Suporte</a></li>
+                        <li><a href="#">Imprensa</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h6>Veja Mais</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Colunistas</a></li>
+                        <li><a href="#">FeedClub</a></li>
+                        <li><a href="#">Musicas</a></li>
+                        <li><a href="#">Curiosidades</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h6>Siga-nos</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="bi bi-youtube"></i> YouTube</a></li>
+                        <li><a href="#"><i class="bi bi-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="bi bi-twitter-x"></i> Twitter</a></li>
+                        <li><a href="#"><i class="bi bi-facebook"></i> Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center text-muted small mb-0">Secret Phase &copy; 2025 - Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

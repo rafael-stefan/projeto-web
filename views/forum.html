@@ -1,252 +1,323 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
+    <title>Secret Phase - Forum</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../public/styles/indexStyles.css">
-    <link rel="stylesheet" href="../public/styles/forum.css">
 </head>
 <body>
-    <header id="mainHeader">
-        <div class="logo-container" onclick="window.location.href='index.html'">
-            <img src="../img/logo_secretphase.png" alt="logo">
-        </div>
-        <div id="infoDiv">
-            <div id="searchDiv">
-                <input type="text" id="searchBar">
-                <button class="btn">
-                    <img src="../img/search.icon.png" alt="search">
-                </button>
-                <button class="btn">
-                    <img src="../img/hamburguer.icon.png" alt="hamburguer">
-                </button>
-            </div>
-            <div id="navigationDiv">
-                <div style="border-radius: 30px 0px 0px 0px;" onclick="window.location.href='faseLancamento.html'"> 
-                    <p>Fase de Lançamento</p>
-                </div>
-                <div onclick="window.location.href='promocoes.html'">
-                    <p>Promoções</p>
-                </div>
-                <div onclick="window.location.href='forum.html'">
-                    <p>Forum</p>
-                </div>
-                <div onclick="window.location.href='contato.html'">
-                    <p>Contato</p>
-                </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="../img/logo_secretphase.png" alt="logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <form class="d-flex mx-auto my-2 my-lg-0" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Pesquisar">
+                    <button class="btn btn-outline-info" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faseLancamento.html">Lancamentos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="promocoes.html">Promocoes</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="forum.html">Forum</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+                </ul>
             </div>
         </div>
-    </header>
+    </nav>
 
-    <section id="ultimasNoticiasImg">
-        <!-- apenas imagens das noticias aqui bem grande -->
-            <img src="../img/outlast1.jpg" alt="" class="noticiaPhoto" onclick="window.location.href='noticia1.html'" style="cursor: pointer;">
-            <div>
-            <img src="../img/hades2.jpg" alt="" class="noticiaPhoto" onclick="window.location.href='noticia2.html'" style="cursor: pointer;">
-            
-            <img src="../img/R6x-Siege-540x960.avif" alt="" class="noticiaPhoto" onclick="window.location.href='noticia3.html'" style="cursor: pointer;">
-            
-            <img src="../img/stellarblade.jpeg" alt="" class="noticiaPhoto" onclick="window.location.href='noticia4.html'" style="cursor: pointer;">
-            
-            <img src="../img/tlou2.jpg" alt="" class="noticiaPhoto" onclick="window.location.href='noticia5.html'" style="cursor: pointer;">
+    <!-- Carousel -->
+    <div id="newsCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#newsCarousel" data-bs-slide-to="4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" onclick="window.location.href='noticia1.html'" style="cursor:pointer;">
+                <img src="../img/outlast1.jpg" class="d-block w-100" alt="Outlast">
+                <div class="carousel-caption d-none d-md-block"><h5>Outlast: O jogo que transformou medo em arte</h5></div>
             </div>
-    </section>
-
-    <div class="layout">
-        <main>
-            <section class="comentarios ultimasNoticias">
-                <div class="noticiasGroup">
-                    <article class="comentario">
-                        <header>
-                            <h2>O que acharam da nova engine do Siege X</h2>
-                        </header>
-                        <div class="content">
-                            <p>Joguei algumas partidas ontem e percebi que a movimentação está mais fluida, mas ainda senti um leve delay na troca de armas. A engine nova realmente melhorou a iluminação, mas será que vai aguentar os campeonatos maiores?</p>
-                        </div>
-                        <div class="comentarioInfo">
-                            <div>
-                                <img src="../img/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10</p>
-                            </div>
-                            <div>
-                                <img src="../img/add_comment_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>2</p>
-                            </div>
-                            <div>
-                                <img src="../img/calendar_month_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10/10/25</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="comentario">
-                        <header>
-                            <h2>Vale a pena jogar Stellar Blade no lançamento?</h2>
-                        </header>
-                        <div class="content">
-                            <p>To pensando em comprar, mas vi muita gente falando sobre a polêmica do design da protagonista. O jogo em si parece ótimo, mas será que o marketing exagerou demais nisso?</p>
-                        </div>
-                        <div class="comentarioInfo">
-                            <div>
-                                <img src="../img/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10</p>
-                            </div>
-                            <div>
-                                <img src="../img/add_comment_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>2</p>
-                            </div>
-                            <div>
-                                <img src="../img/calendar_month_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10/10/25</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="comentario">
-                        <header>
-                            <h2>AC Shadows: vocês vão jogar com o samurai ou a shinobi primeiro?</h2>
-                        </header>
-                        <div class="content">
-                            <p>Achei incrível poder escolher entre dois protagonistas com estilos tão diferentes. Alguém aqui vai direto no stealth com a Naoe ou prefere ir no braço com o Yasuke?</p>
-                        </div>
-                        <div class="comentarioInfo">
-                            <div>
-                                <img src="../img/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10</p>
-                            </div>
-                            <div>
-                                <img src="../img/add_comment_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>2</p>
-                            </div>
-                            <div>
-                                <img src="../img/calendar_month_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10/10/25</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="comentario">
-                        <header>
-                            <h2>Final de The Last of Us T2 vai dividir geral de novo?</h2>
-                        </header>
-                        <div class="content">
-                            <p>Depois dos rumores, parece que a série vai seguir o roteiro do jogo 2 bem de perto. Eu curti a coragem da história, mas sei que muita gente vai ficar revoltada de novo. Vocês acham que a HBO vai suavizar algo?</p>
-                        </div>
-                        <div class="comentarioInfo">
-                            <div>
-                                <img src="../img/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10</p>
-                            </div>
-                            <div>
-                                <img src="../img/add_comment_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>2</p>
-                            </div>
-                            <div>
-                                <img src="../img/calendar_month_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10/10/25</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="comentario">
-                        <header>
-                            <h2>Outlast ainda assusta ou virou fórmula repetida?</h2>
-                        </header>
-                        <div class="content">
-                            <p>Joguei o primeiro de novo esses dias e ainda arrepia! Mas confesso que depois de tantos jogos parecidos, a fórmula está ficando previsível. Acho que falta inovação no gênero.</p>
-                        </div>
-                        <div class="comentarioInfo">
-                            <div>
-                                <img src="../img/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10</p>
-                            </div>
-                            <div>
-                                <img src="../img/add_comment_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>2</p>
-                            </div>
-                            <div>
-                                <img src="../img/calendar_month_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10/10/25</p>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="comentario">
-                        <header>
-                            <h2>Promoções da Steam valem a pena mesmo ou é ilusão?</h2>
-                        </header>
-                        <div class="content">
-                            <p>Tô com 60 jogos na biblioteca e zerei só uns 5 😂 Alguém mais compra por impulso e depois nem instala? A promo de inverno tá vindo aí e já tô com medo da carteira.</p>
-                        </div>
-                        <div class="comentarioInfo">
-                            <div>
-                                <img src="../img/favorite_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10</p>
-                            </div>
-                            <div>
-                                <img src="../img/add_comment_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>2</p>
-                            </div>
-                            <div>
-                                <img src="../img/calendar_month_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" alt="like">
-                                <p>10/10/25</p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-                
-            </section>
-        </main>
-    
-        <aside>
-            <div class="asideNoticia" onclick="window.location.href='noticia7.html'" style="cursor: pointer;">
-                <img src="../img/acshadow.jpeg" alt="" id="asideFoto">
-                <h3>Assassin’s Creed Shadows: Japão Feudal e Dupla Protagonista Marcam Nova Fase da Franquia</h3>
+            <div class="carousel-item" onclick="window.location.href='noticia2.html'" style="cursor:pointer;">
+                <img src="../img/hades2.jpg" class="d-block w-100" alt="Hades II">
+                <div class="carousel-caption d-none d-md-block"><h5>Hades II: o retorno triunfante ao inferno</h5></div>
             </div>
-            <div class="asideNoticia" onclick="window.location.href='noticia6.html'" style="cursor: pointer;">
-                <img src="../img/fallout-capa.webp" alt="" id="asideFoto">
-                <h3>Fallout: a adaptação que surpreendeu até os céticos</h3>
+            <div class="carousel-item" onclick="window.location.href='noticia3.html'" style="cursor:pointer;">
+                <img src="../img/R6x-Siege-540x960.avif" class="d-block w-100" alt="R6 Siege X">
+                <div class="carousel-caption d-none d-md-block"><h5>Rainbow Six Siege X: A Nova Era do Competitivo</h5></div>
             </div>
-            <div class="asideNoticia" onclick="window.location.href='noticia1.html'" style="cursor: pointer;">
-                <img src="../img/outlast1.jpg" alt="" id="asideFoto">
-                <h3>OutLast: O jogo que transformou medo em arte</h3>
+            <div class="carousel-item" onclick="window.location.href='noticia4.html'" style="cursor:pointer;">
+                <img src="../img/stellarblade.jpeg" class="d-block w-100" alt="Stellar Blade">
+                <div class="carousel-caption d-none d-md-block"><h5>Stellar Blade: estilo, combate e polemica</h5></div>
             </div>
-            <div class="asideNoticia" onclick="window.location.href='noticia2.html'" style="cursor: pointer;">
-                <img src="../img/hades2.jpg" alt="" id="asideFoto">
-                <h3>Hades II: o retorno triunfante ao inferno</h3>
+            <div class="carousel-item" onclick="window.location.href='noticia5.html'" style="cursor:pointer;">
+                <img src="../img/tlou2.jpg" class="d-block w-100" alt="The Last of Us">
+                <div class="carousel-caption d-none d-md-block"><h5>The Last of Us - Temporada 2</h5></div>
             </div>
-           
-        </aside> 
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#newsCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span><span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#newsCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span><span class="visually-hidden">Proximo</span>
+        </button>
     </div>
 
-    <footer>
-        <div id="footerpoliticas">
-            <nav>
-                <ul>
-                    <li><a href="">Politica de privacidade</a></li>
-                    <li><a href="">Politica de cookies</a></li>
-                    <li><a href="">termos de uso</a></li>
-                    <li><a href="">Suporte</a></li>
-                    <li><a href="">Imprensa</a></li>
-                </ul>
-            </nav>
+    <!-- Alert para topico excluido -->
+    <div class="container-fluid mt-3">
+        <div class="alert alert-warning alert-dismissible fade show d-none" role="alert" id="deleteAlert">
+            <i class="bi bi-trash"></i> <strong>Topico excluido com sucesso!</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
         </div>
-        <div id="footerVejaMais">
-            <nav>
-                <ul>
-                    <li><a href="">Colunistas</a></li>
-                    <li><a href="">FeedClub</a></li>
-                    <li><a href="">Musicas</a></li>
-                    <li><a href="">Curiosidades</a></li>
-                </ul>
-            </nav>
+    </div>
+
+    <!-- Conteudo Principal -->
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <!-- Tabela de Topicos do Forum -->
+            <div class="col-lg-9">
+                <div class="section-dark">
+                    <h2 class="mb-3"><i class="bi bi-chat-dots-fill"></i> Forum - Topicos Recentes</h2>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover table-dark align-middle">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Topico</th>
+                                    <th scope="col" class="d-none d-md-table-cell">Curtidas</th>
+                                    <th scope="col" class="d-none d-md-table-cell">Comentarios</th>
+                                    <th scope="col" class="d-none d-md-table-cell">Data</th>
+                                    <th scope="col">Acoes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>O que acharam da nova engine do Siege X</td>
+                                    <td class="d-none d-md-table-cell"><i class="bi bi-heart-fill text-danger"></i> 10</td>
+                                    <td class="d-none d-md-table-cell"><i class="bi bi-chat-fill text-info"></i> 2</td>
+                                    <td class="d-none d-md-table-cell">10/10/25</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#detailModal1"><i class="bi bi-eye"></i> Detalhes</button>
+                                        <button class="btn btn-sm btn-danger" onclick="document.getElementById('deleteAlert').classList.remove('d-none')"><i class="bi bi-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Vale a pena jogar Stellar Blade no lancamento?</td>
+                                    <td class="d-none d-md-table-cell"><i class="bi bi-heart-fill text-danger"></i> 10</td>
+                                    <td class="d-none d-md-table-cell"><i class="bi bi-chat-fill text-info"></i> 2</td>
+                                    <td class="d-none d-md-table-cell">10/10/25</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#detailModal2"><i class="bi bi-eye"></i> Detalhes</button>
+                                        <button class="btn btn-sm btn-danger" onclick="document.getElementById('deleteAlert').classList.remove('d-none')"><i class="bi bi-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>AC Shadows: voces vao jogar com o samurai ou a shinobi primeiro?</td>
+                                    <td class="d-none d-md-table-cell"><i class="bi bi-heart-fill text-danger"></i> 10</td>
+                                    <td class="d-none d-md-table-cell"><i class="bi bi-chat-fill text-info"></i> 2</td>
+                                    <td class="d-none d-md-table-cell">10/10/25</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#detailModal3"><i class="bi bi-eye"></i> Detalhes</button>
+                                        <button class="btn btn-sm btn-danger" onclick="document.getElementById('deleteAlert').classList.remove('d-none')"><i class="bi bi-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">4</th>
+                                    <td>Final de The Last of Us T2 vai dividir geral de novo?</td>
+                                    <td class="d-none d-md-table-cell"><i class="bi bi-heart-fill text-danger"></i> 10</td>
+                                    <td class="d-none d-md-table-cell"><i class="bi bi-chat-fill text-info"></i> 2</td>
+                                    <td class="d-none d-md-table-cell">10/10/25</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#detailModal4"><i class="bi bi-eye"></i> Detalhes</button>
+                                        <button class="btn btn-sm btn-danger" onclick="document.getElementById('deleteAlert').classList.remove('d-none')"><i class="bi bi-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">5</th>
+                                    <td>Outlast ainda assusta ou virou formula repetida?</td>
+                                    <td class="d-none d-md-table-cell"><i class="bi bi-heart-fill text-danger"></i> 10</td>
+                                    <td class="d-none d-md-table-cell"><i class="bi bi-chat-fill text-info"></i> 2</td>
+                                    <td class="d-none d-md-table-cell">10/10/25</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#detailModal5"><i class="bi bi-eye"></i> Detalhes</button>
+                                        <button class="btn btn-sm btn-danger" onclick="document.getElementById('deleteAlert').classList.remove('d-none')"><i class="bi bi-trash"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">6</th>
+                                    <td>Promocoes da Steam valem a pena mesmo ou e ilusao?</td>
+                                    <td class="d-none d-md-table-cell"><i class="bi bi-heart-fill text-danger"></i> 10</td>
+                                    <td class="d-none d-md-table-cell"><i class="bi bi-chat-fill text-info"></i> 2</td>
+                                    <td class="d-none d-md-table-cell">10/10/25</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-info" data-bs-toggle="modal" data-bs-target="#detailModal6"><i class="bi bi-eye"></i> Detalhes</button>
+                                        <button class="btn btn-sm btn-danger" onclick="document.getElementById('deleteAlert').classList.remove('d-none')"><i class="bi bi-trash"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Aside -->
+            <div class="col-lg-3 mt-3 mt-lg-0">
+                <h5 class="mb-3"><i class="bi bi-fire"></i> Destaques</h5>
+                <div class="card aside-card mb-3" onclick="window.location.href='noticia7.html'" style="cursor:pointer;">
+                    <img src="../img/acshadow.jpeg" class="card-img-top" alt="AC Shadows">
+                    <div class="card-body p-2">
+                        <h6 class="card-title small">Assassin's Creed Shadows: Japao Feudal e Dupla Protagonista</h6>
+                    </div>
+                </div>
+                <div class="card aside-card mb-3" onclick="window.location.href='noticia6.html'" style="cursor:pointer;">
+                    <img src="../img/fallout-capa.webp" class="card-img-top" alt="Fallout">
+                    <div class="card-body p-2">
+                        <h6 class="card-title small">Fallout: a adaptacao que surpreendeu ate os ceticos</h6>
+                    </div>
+                </div>
+                <div class="card aside-card mb-3" onclick="window.location.href='noticia1.html'" style="cursor:pointer;">
+                    <img src="../img/outlast1.jpg" class="card-img-top" alt="Outlast">
+                    <div class="card-body p-2">
+                        <h6 class="card-title small">OutLast: O jogo que transformou medo em arte</h6>
+                    </div>
+                </div>
+                <div class="card aside-card mb-3" onclick="window.location.href='noticia2.html'" style="cursor:pointer;">
+                    <img src="../img/hades2.jpg" class="card-img-top" alt="Hades II">
+                    <div class="card-body p-2">
+                        <h6 class="card-title small">Hades II: o retorno triunfante ao inferno</h6>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div id="footerSiga">
-            <nav>
-                <ul>
-                    <li><a href="">YouTube</a></li>
-                    <li><a href="">Instagram</a></li>
-                    <li><a href="">Twitter</a></li>
-                    <li><a href="">Facebook</a></li>
-                </ul>
-            </nav>
+    </div>
+
+    <!-- Modals de Detalhes -->
+    <div class="modal fade" id="detailModal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="background-color: var(--primary-dark);">
+                <div class="modal-header"><h5 class="modal-title">O que acharam da nova engine do Siege X</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body">
+                    <p>Joguei algumas partidas ontem e percebi que a movimentacao esta mais fluida, mas ainda senti um leve delay na troca de armas. A engine nova realmente melhorou a iluminacao, mas sera que vai aguentar os campeonatos maiores?</p>
+                    <div class="d-flex gap-3 text-muted"><span><i class="bi bi-heart-fill text-danger"></i> 10</span><span><i class="bi bi-chat-fill text-info"></i> 2</span><span><i class="bi bi-calendar"></i> 10/10/25</span></div>
+                </div>
+                <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="detailModal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="background-color: var(--primary-dark);">
+                <div class="modal-header"><h5 class="modal-title">Vale a pena jogar Stellar Blade no lancamento?</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body">
+                    <p>To pensando em comprar, mas vi muita gente falando sobre a polemica do design da protagonista. O jogo em si parece otimo, mas sera que o marketing exagerou demais nisso?</p>
+                    <div class="d-flex gap-3 text-muted"><span><i class="bi bi-heart-fill text-danger"></i> 10</span><span><i class="bi bi-chat-fill text-info"></i> 2</span><span><i class="bi bi-calendar"></i> 10/10/25</span></div>
+                </div>
+                <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="detailModal3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="background-color: var(--primary-dark);">
+                <div class="modal-header"><h5 class="modal-title">AC Shadows: voces vao jogar com o samurai ou a shinobi primeiro?</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body">
+                    <p>Achei incrivel poder escolher entre dois protagonistas com estilos tao diferentes. Alguem aqui vai direto no stealth com a Naoe ou prefere ir no braco com o Yasuke?</p>
+                    <div class="d-flex gap-3 text-muted"><span><i class="bi bi-heart-fill text-danger"></i> 10</span><span><i class="bi bi-chat-fill text-info"></i> 2</span><span><i class="bi bi-calendar"></i> 10/10/25</span></div>
+                </div>
+                <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="detailModal4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="background-color: var(--primary-dark);">
+                <div class="modal-header"><h5 class="modal-title">Final de The Last of Us T2 vai dividir geral de novo?</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body">
+                    <p>Depois dos rumores, parece que a serie vai seguir o roteiro do jogo 2 bem de perto. Eu curti a coragem da historia, mas sei que muita gente vai ficar revoltada de novo. Voces acham que a HBO vai suavizar algo?</p>
+                    <div class="d-flex gap-3 text-muted"><span><i class="bi bi-heart-fill text-danger"></i> 10</span><span><i class="bi bi-chat-fill text-info"></i> 2</span><span><i class="bi bi-calendar"></i> 10/10/25</span></div>
+                </div>
+                <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="detailModal5" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="background-color: var(--primary-dark);">
+                <div class="modal-header"><h5 class="modal-title">Outlast ainda assusta ou virou formula repetida?</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body">
+                    <p>Joguei o primeiro de novo esses dias e ainda arrepia! Mas confesso que depois de tantos jogos parecidos, a formula esta ficando previsivel. Acho que falta inovacao no genero.</p>
+                    <div class="d-flex gap-3 text-muted"><span><i class="bi bi-heart-fill text-danger"></i> 10</span><span><i class="bi bi-chat-fill text-info"></i> 2</span><span><i class="bi bi-calendar"></i> 10/10/25</span></div>
+                </div>
+                <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="detailModal6" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" style="background-color: var(--primary-dark);">
+                <div class="modal-header"><h5 class="modal-title">Promocoes da Steam valem a pena mesmo ou e ilusao?</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body">
+                    <p>To com 60 jogos na biblioteca e zerei so uns 5. Alguem mais compra por impulso e depois nem instala? A promo de inverno ta vindo ai e ja to com medo da carteira.</p>
+                    <div class="d-flex gap-3 text-muted"><span><i class="bi bi-heart-fill text-danger"></i> 10</span><span><i class="bi bi-chat-fill text-info"></i> 2</span><span><i class="bi bi-calendar"></i> 10/10/25</span></div>
+                </div>
+                <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-custom text-white pt-4 pb-3 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h6>Politicas</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Politica de privacidade</a></li>
+                        <li><a href="#">Politica de cookies</a></li>
+                        <li><a href="#">Termos de uso</a></li>
+                        <li><a href="#">Suporte</a></li>
+                        <li><a href="#">Imprensa</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h6>Veja Mais</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Colunistas</a></li>
+                        <li><a href="#">FeedClub</a></li>
+                        <li><a href="#">Musicas</a></li>
+                        <li><a href="#">Curiosidades</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h6>Siga-nos</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="bi bi-youtube"></i> YouTube</a></li>
+                        <li><a href="#"><i class="bi bi-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="bi bi-twitter-x"></i> Twitter</a></li>
+                        <li><a href="#"><i class="bi bi-facebook"></i> Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center text-muted small mb-0">Secret Phase &copy; 2025 - Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Phase - Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../public/styles/indexStyles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="../img/logo_secretphase.png" alt="logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarMain">
+                <form class="d-flex mx-auto my-2 my-lg-0" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Pesquisar..." aria-label="Pesquisar">
+                    <button class="btn btn-outline-info" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faseLancamento.html">Lancamentos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="promocoes.html">Promocoes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="forum.html">Forum</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="dashboard.html">Dashboard</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteudo do Dashboard -->
+    <div class="container-fluid mt-4">
+        <h2 class="mb-4"><i class="bi bi-speedometer2"></i> Dashboard - Painel Administrativo</h2>
+
+        <!-- Cards de Resumo -->
+        <div class="row g-4 mb-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="card text-white border-0" style="background-color: #0d6efd;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="card-title mb-1">Total de Noticias</h6>
+                                <h2 class="mb-0">7</h2>
+                            </div>
+                            <i class="bi bi-newspaper fs-1 opacity-50"></i>
+                        </div>
+                        <small class="opacity-75"><i class="bi bi-arrow-up"></i> +2 esta semana</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card text-white border-0" style="background-color: #198754;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="card-title mb-1">Topicos no Forum</h6>
+                                <h2 class="mb-0">6</h2>
+                            </div>
+                            <i class="bi bi-chat-dots fs-1 opacity-50"></i>
+                        </div>
+                        <small class="opacity-75"><i class="bi bi-arrow-up"></i> +3 este mes</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card text-white border-0" style="background-color: #ffc107; color: #000 !important;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="card-title mb-1 text-dark">Promocoes Ativas</h6>
+                                <h2 class="mb-0 text-dark">5</h2>
+                            </div>
+                            <i class="bi bi-tag fs-1 opacity-50 text-dark"></i>
+                        </div>
+                        <small class="opacity-75 text-dark"><i class="bi bi-dash"></i> Mesmo que o mes anterior</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card text-white border-0" style="background-color: #dc3545;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <h6 class="card-title mb-1">Mensagens Pendentes</h6>
+                                <h2 class="mb-0">3</h2>
+                            </div>
+                            <i class="bi bi-envelope-exclamation fs-1 opacity-50"></i>
+                        </div>
+                        <small class="opacity-75"><i class="bi bi-exclamation-triangle"></i> Requer atencao</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Noticias Recentes -->
+            <div class="col-lg-8">
+                <div class="card card-custom">
+                    <div class="card-header" style="background-color: var(--primary-dark);">
+                        <h5 class="mb-0"><i class="bi bi-clock-history"></i> Noticias Recentes</h5>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-dark table-hover mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>Titulo</th>
+                                        <th>Curtidas</th>
+                                        <th>Data</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Outlast: O jogo que transformou medo em arte</td>
+                                        <td>10</td>
+                                        <td>10/10/25</td>
+                                        <td><span class="badge bg-success">Publicado</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hades II: o retorno triunfante ao inferno</td>
+                                        <td>10</td>
+                                        <td>10/10/25</td>
+                                        <td><span class="badge bg-success">Publicado</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Rainbow Six Siege X: A Nova Era</td>
+                                        <td>10</td>
+                                        <td>10/10/25</td>
+                                        <td><span class="badge bg-success">Publicado</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Stellar Blade: estilo e combate</td>
+                                        <td>10</td>
+                                        <td>10/10/25</td>
+                                        <td><span class="badge bg-warning text-dark">Revisao</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>The Last of Us - Temporada 2</td>
+                                        <td>10</td>
+                                        <td>10/10/25</td>
+                                        <td><span class="badge bg-success">Publicado</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Acesso Rapido -->
+            <div class="col-lg-4">
+                <div class="card card-custom mb-4">
+                    <div class="card-header" style="background-color: var(--primary-dark);">
+                        <h5 class="mb-0"><i class="bi bi-lightning-fill"></i> Acesso Rapido</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-grid gap-2">
+                            <a href="contato.html" class="btn btn-outline-info"><i class="bi bi-envelope-plus"></i> Ver Mensagens</a>
+                            <a href="forum.html" class="btn btn-outline-success"><i class="bi bi-chat-dots"></i> Gerenciar Forum</a>
+                            <a href="promocoes.html" class="btn btn-outline-warning"><i class="bi bi-tag"></i> Gerenciar Promocoes</a>
+                            <a href="faseLancamento.html" class="btn btn-outline-danger"><i class="bi bi-rocket-takeoff"></i> Lancamentos</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-custom">
+                    <div class="card-header" style="background-color: var(--primary-dark);">
+                        <h5 class="mb-0"><i class="bi bi-bell-fill"></i> Alertas</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-info py-2 mb-2" role="alert">
+                            <small><i class="bi bi-info-circle"></i> Nova noticia sobre GTA VI pendente</small>
+                        </div>
+                        <div class="alert alert-warning py-2 mb-2" role="alert">
+                            <small><i class="bi bi-exclamation-triangle"></i> 3 mensagens nao lidas</small>
+                        </div>
+                        <div class="alert alert-success py-2 mb-0" role="alert">
+                            <small><i class="bi bi-check-circle"></i> Promocoes atualizadas com sucesso</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer-custom text-white pt-4 pb-3 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h6>Politicas</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Politica de privacidade</a></li>
+                        <li><a href="#">Politica de cookies</a></li>
+                        <li><a href="#">Termos de uso</a></li>
+                        <li><a href="#">Suporte</a></li>
+                        <li><a href="#">Imprensa</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h6>Veja Mais</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Colunistas</a></li>
+                        <li><a href="#">FeedClub</a></li>
+                        <li><a href="#">Musicas</a></li>
+                        <li><a href="#">Curiosidades</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h6>Siga-nos</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="bi bi-youtube"></i> YouTube</a></li>
+                        <li><a href="#"><i class="bi bi-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="bi bi-twitter-x"></i> Twitter</a></li>
+                        <li><a href="#"><i class="bi bi-facebook"></i> Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center text-muted small mb-0">Secret Phase &copy; 2025 - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
